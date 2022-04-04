@@ -1,435 +1,123 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Affluence</title>
-	<script src="ScriptFile.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
-</head>
-<body> 
-	<header> 
-		<span class="nav-mid" id="nav-welcome">Affluence</span>
-		<img src="logo.png" alt="logo du site" id="logo">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		</header>
+    <title>Half-Page Full Width Slider Starter Template for Bootstrap</title>
 
-	<ul class="menu">
-		<li class="menu-bague"><a href="main page2222.html">Acceuil</a>
-			
-		</li>
-		<li class="graphique"><a href="graphique.html">Graphique</a>
-			<ul class="sub-menu">
-				<li><a href="lundi.html">Lundi</a></li>	
-				<li><a href="mardi.html">Mardi</a></li>
-				<li><a href="mercredi.html">Mercredi</a></li>	
-				<li><a href="jeudi.html">Jeudi</a></li>
-				<li><a href="vendredi.html">Vendredi</a></li>	
-				<li><a href="samedi.html">Samedi</a></li>
-			</ul>
-			</li>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-		<li class="menu-alliance"><a href="projet.html">Projet</a>
-			<ul class="sub-menu">
-				<li><a href="#">SQL</a></li>	
-				<li><a href="#">Python</a></li>
-			</ul>
-		</li>
-		<li class="menu-collier"><a href="aboutus.html">About us</a>
-			
-		
-			
-		</li>
-	</ul>
+    <!-- Add custom CSS here -->
+    <link href="css/half-slider.css" rel="stylesheet">
 
-	<ul class="borders">
-		</ul>
-	<ul class="borders2">
-		</ul>
-		 <p class="paragraphe"> .............................................................. </p>
+  </head>
 
-		<ul class="point">
- 		<li> Point 1</li>
- 		<LI>Point 2</LI>
- 	</ul>
- 	<p class="paragraphe"> .............................................................. </p>
- <style>
-body{
-	background-color:white	;
-	margin:0;
-	padding: 0;
-	font-family: 'Source Serif Pro', serif;
+  <body>
 
-}
-																				/*  Le header */
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+        </div>
 
-header{
-	margin-top : 0px;
-	padding-top: 10px;
-	background: rgb(30,60,80);
-	text-align:center;
-	font-size: 45px;
-	color: black;
-	position:absolute;
-	left:0;top:0;
-	width:100%;
-	height: 65px;
-	border-bottom: 1px solid black;
-	z-index: 1000;
-
-}
-
-
-
-.nav-left {
-	font-size: 25px;
-	display: inline-flex;
-	justify-content: flex-start;
-	position:absolute;
-	left:15%;
-	bottom:20px;
-	padding:0 25px;
-
-}
-
-.nav-right{
-	font-size: 25px;
-	display: inline-flex;
-	justify-content: flex-end;
-	position:absolute;
-	right: 15%;
-	bottom:20px;
-	padding:0 25px;
-
-}
-
-.nav-mid{
-	display: inline-flex;
-	justify-content: center;
-}
-																				/*Hover Header */
-.nav-right:hover{
-	box-shadow: 0px 0px 3px white;
-}
-
-.nav-left:hover{
-	box-shadow: 0px 0px 3px white;
-}	
- 																					/*MENU */
-
-.menu{
-	display:flex;
-	justify-content: center;
-	height: 50px;
-	margin: 75px 0 0 0;
-	padding: 0;
-	padding-top: 0px;
-	background-color:rgb(24,26,26);
-	border-bottom: 1px solid black;
-}
-
-.menu >li{
-	text-align: center;
-	list-style-type: none;
-	font-size: 16px;
-	width :155px;
-	padding:15px;
-	color:white;
-
-}
-
-
-																				/*Sub-menu*/
-
-.sub-menu{
-	display:none;
-	flex-flow: column nowrap;
-	margin:0;
-	padding: 0;
-	position: relative;
-	top:15px;left:-15px;
-	width:240px;
-
-}
-
-
-.sub-menu >li{
-	text-align: left;
-	list-style-type: none;
-	padding:15px;
-	margin:0;
-	z-index: 3;
-	width:100%;
-	border-bottom: 1px solid white; 
-	background-color:rgb(0,0,0);
-	/*display:none; a supprimer*/
-}
-
-													/* Gerer le style des <a> Les links (enlever les valeurs par défauts)*/
-.menu>li>a{
-	color:white;
-	text-decoration: none;
-}
-.sub-menu>li>a{
-	color:white;
-	text-decoration: none;
-}
-																			/*Hover Menu*/
-
-.menu >li:hover{
-	background-color:rgba(0,0,0,0.5);
-	border-top:6px solid rgb(0,0,0);
-	box-shadow: 0 0 4px black;
-	padding-top:9px;
-  }
-
-.menu >li:hover .sub-menu{
-	display: flex;
-}
-
-.sub-menu a:hover{
-	color:red;
-	text-shadow: 1px 1px 1px black
-}
-
-#logo {
-	width:80px;
-	height:80px;
-	padding:0px;
-	top:0px;
-	left:10px;
-	position:absolute;
-
- }
-
-.paragraphe{
-  	color: black;
-  	padding: 10px;
- 	position: sticky;
- 	margin: 2em 15em;
- 	font-family: Georgia;
- 	font-size:18px;
-
-}
-
-.borders{
-	position:flex;
-	height: 50px;
-	background-color:rgb(30,60,80);
-	margin:0px;
-	float: left;
-	padding-left:150px;
-	padding-bottom:791px;
-	padding-top:0px;
-}
-
-.borders2{
-	position:flex;
-	height: 50px;
-	background-color:rgb(30,60,80);
-	margin:0px;
-	float: right;
-	padding-left:150px;
-	padding-bottom:791px;
-	padding-top:0px;
-}
-
-.point{
-	color: rgb(30,60,80);
-  	padding: 10px;
- 	position: sticky;
- 	margin: 2em 15em;
- 	font-family: Georgia;
- 	font-size:18px;
-}
-
-
-
-
-
-.container{
-  width:400px;
-  height:200px;
-  position:relative;
-  perspective: 1000;
-  -webkit-perspective: 1000;
-  left:calc(50% - 200px);
-  top:calc(50vh - 100px);
-}
-.card{
-  width:100%;
-  height:100%;
-  position:absolute;
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-  transition:transform 1s ease;
-  cursor:pointer;
-}
-.back, .front{
-  border-radius:6px;
-  position:absolute;
-  width:100%;
-  height:100%;
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-  
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-}
-.contentfront{
-  width:100%;
-  height:100%;
-  float:left;
-  transform:translatez(60px);
-  -webkit-transform:translatez(60px);
-  
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-  
-}
-.contentback{
-  width:100%;
-  height:100%;
-  float:left;
-  transform:translatez(60px);
-  -webkit-transform:translatez(60px);
-  
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-  
-}
-.back{
-  transform:rotateY(180deg);
-  background-color:rgb(30,60,80);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.front{
-  text-transform:uppercase;
-  background-color:rgb(30,60,80);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.date{
-  height:100%;
-  width:130px;
-  float:left;
-  background-color:#E76642;
-  border-radius:0 6px 6px 0;
-  text-align:right;
-  padding:10px 30px;
-  box-sizing:border-box;
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-}
-.datecont{
-  height:100%;
-  transform:translatez(60px) scale(.9);
-  -webkit-transform:translatez(60px) scale(.9);
-}
-#date{
-  font-size:50px;
-  color:#ECECE7;
-  font-family: 'Montserrat', sans-serif;
-  font-weight:500;
-  float:right;
-}
-#day{
-  float:right;
-  font-size:14px;
-  color:#232227;
-  font-family: 'Montserrat', sans-serif;
-  font-weight:400;
-}
-#month{
-  float:right;
-  font-size:10px;
-  color:#232227;
-  font-family: 'Montserrat', sans-serif;
-  font-weight:200;
-}
-.date i{
-  color:#ECECE7;
-  position:absolute;
-  bottom:10px;
-  right:0;
-}
-.date i:hover{
-  color:#232227;
-  transition:.3s ease;
-}
-.month{
-  height:100%;
-  width:270px;
-  float:left;
-  padding:20px 30px;
-  box-sizing:border-box;
-}
-.month table{
-  width:100%;
-}
-.orangeTr{
-  color:#E76642;
-}
-.whiteTr{
-  color:#ECECE7;
-  
-}
-.whiteTr th:hover{
-  color:#E76642;
-  transition:.3s ease;
-}
-.month tr{
-  height:24px;
-}
-.month th{
-  width:14%;
-  font-size:10px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight:400;
-}
-
-.flipped{
-  transform:rotateY(-180deg);
-  /*height:400px;
-  width:200px;
-  left:calc(50% - 100px);
-  top:calc(50vh - 200px);*/
-}
-.backcontainer{
-  transform-style:preserve-3d;
-  width:calc(100% - 60px);
-  height:calc(100% - 40px);
-  float:left;
-  margin-left:30px;
-  margin-top:20px;
-  /*transform:translatez(60px) scale();*/
-  
-  background-color:#E76642;
-  border-radius:6px;
-  padding:10px 30px;
-  box-sizing:border-box;
-  transform-style:preserve-3d;
-  -webkit-transform-style:preserve-3d;
-}
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
     
-</style>
-	
-</body>
+    <div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+            <div class="carousel-caption">
+              <h1>A Full-Width Image Slider Template</h1>
+            </div>
+          </div>
+          <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+            <div class="carousel-caption">
+              <h1>Caption 2</h1>
+            </div>
+          </div>
+          <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+            <div class="carousel-caption">
+              <h1>Caption 3</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+    </div>
+
+    <div class="container">
+
+      <div class="row section">
+        <div class="col-lg-12">
+          <h1>A Full Width Image Slider Template</h1>
+          <p>This is a great starting point for yet another modern and stylish website. Here are some things to consider when working with this template:</p>
+          <ul>
+          	<li>Unique Fonts</li>
+          	<li>Attractive Colors</li>
+          	<li>Content Spacing for Legibility and Design</li>
+          	<li>Decent Pictures that Still Load Quickly (less than 400KB for example)</li>
+          	<li>Make the Pictures INFORMATIVE</li>
+          	<li>Custom Styling for the Captions</li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Company 2013</p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+      $('.carousel').carousel({
+        interval: 5000 //changes the speed
+      })
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
