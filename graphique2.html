@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Social Norms</title>
+	<link href="stylex.css" rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="web.js"></script> 
+</head>
+<body> 
+	<!-- La barre de navigation --------------------------------------------------->
+	<header> 
+      <!--  --------------------------------------------------->
+
+  <div class="patterns">
+  <svg width="100%" height="100%">
+    <defs>
+      <pattern id="polka-dots" x="0" y="0"                    width="100" height="100"
+               patternUnits="userSpaceOnUse">
+        <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
+      </pattern>  
+        <style>
+     @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+   </style>
+      
+    </defs> 
+              
+     
+    
+
+ <text x="50%" y="60%"  text-anchor="middle"  >
+   Social Norms
+ </text>
+ </svg>
+</div>
+  <!--  --------------------------------------------------->
+
+
+		</header>
+  <!--  --------------------------------------------------->
+
+
+  <!--  --------------------------------------------------->
+
+
+	<ul class="menu">
+    <li class="menu-bague"><a href="index.html">Acceuil</a>
+      
+    </li>
+    <li class="graphique"><a href="graphique2.html">Modelisation</a>
+
+      </li>
+    <li class="menu-alliance"><a href="projet.html">Code python</a>
+      
+
+    </li>
+    <li class="menu-collier"><a href="aboutus.html">About us</a>
+		
+			
+		</li>
+	</ul>
+
+	<ul class="borders">
+		</ul>
+	<ul class="borders2">
+		</ul>
+<!--
+  <body onload="startTime()">
+  <div class="container">
+    <div class="card">
+      <div class="front">
+        <div class="contentfront">
+          <div class="month">
+            <table>
+              <tr class="orangeTr">
+                <th>l</th>
+                <th>M</th>
+                <th>M</th>
+                <th>j</th>
+                <th>V</th>
+                <th>S</th>
+                <th>D</th>
+              </tr>
+              <tr class="whiteTr">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+              </tr>
+              <tr class="whiteTr">
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr class="whiteTr">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr class="whiteTr">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr class="whiteTr">
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </table>
+          </div>
+          <div class="date">
+            <div class="datecont">
+              <div id="date"></div>
+              <div id="day"></div>
+              <div id="month"></div>
+              <i class="fa fa-pencil edit" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="contentback">
+          <div class="backcontainer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+	let cardElement = document.querySelector(".card");
+  const backCont = document.querySelector('.backcontainer');
+  const tablee = document.querySelectorAll('.month table th');
+  
+  const imgs = [
+    '',
+    'img1.png',
+    'img2.png',
+    'img3.png',
+    'img4.png',
+    'img5.png',
+    'img6.png',
+    'img7.png',  
+    'img8.png',  
+    'img9.png'  
+  ];
+ 
+  tablee.forEach((th) => {
+    th.addEventListener('click', () => {
+      backCont.innerHTML = `<img src="${imgs[th.innerHTML]}" alt="">`
+    });
+  });
+  
+cardElement.addEventListener("click", flip);
+
+function flip(){
+  cardElement.classList.toggle("flipped")
+}
+
+function startTime() {
+    var weekday = new Array();
+    weekday[0] =  "Dimanche";
+    weekday[1] = "lundi";
+    weekday[2] = "Mardi";
+    weekday[3] = "Mercredi";
+    weekday[4] = "Jeudi";
+    weekday[5] = "Vendredi";
+    weekday[6] = "Samedi";
+    var month = new Array();
+    month[0] = "Janvier";
+    month[1] = "Février";
+    month[2] = "Mars";
+    month[3] = "Avril";
+    month[4] = "Mai";
+    month[5] = "Juin";
+    month[6] = "Juillet";
+    month[7] = "Aout";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var d = today.getDate();
+    var y = today.getFullYear();
+    var wd = weekday[today.getDay()];
+    var mt = month[today.getMonth()];
+  
+    m = checkTime(m);
+    s = checkTime(s);
+                    document.getElementById('date').innerHTML =
+    d;
+ document.getElementById('day').innerHTML =
+    wd;
+ document.getElementById('month').innerHTML =
+    mt + "/" + y;
+    
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
+-->
+  <h3 id="titre">Déroulement de l’expérience</h3>
+  <p class="paragraphe"> Initialement, nous avons réalisé une expérience avec une population de 100 individus qui initialement ont une couleur assignée aléatoirement (rouge ou bleu). Chaque individu a une probabilité de 0.8 de changer de couleur. Une fois qu’il a décidé de changer, il regarde les voisins dans un rayon de 0.2, compte le nombre de voisins rouges et bleus et prend la couleur qui est majoritaire dans son rayon d’influence. <br> Voici les résultats obtenus après une simulation : <br> les graphs <br> Regardons maintenant comment les résultats changent en faisant varier la distribution initiale des couleurs, le rayon dans lequel un agent est influencé, et sa probabilité de changer : <br> les graphs </p>
+
+
+  <h3 id="titre"> Modélisation de l’effet en ajoutant un critère "âge". </h3>
+  <p class="paragraphe"> Les expériences précédentes nous ont permis d’observer l’évolution d’un effet de mode chez une population ou tous les individus ont la même probabilité d’être influencés par leurs voisins.  Cette approche est intéressante mais reste assez éloignée d’une modélisation réaliste d’une société qui consomme. Nous avons alors décidé qu’un des critères les plus importants qui détermine si un consommateur est influencé ou non par ses voisins est son âge. Nous voulons donc réaliser la même expérience en donnant un âge à chaque individu et, en plus, en faisant que les agents du système soient uniquement influencés par des voisins qui sont proches en âge avec eux. <br> Afin de simplifier notre modèle, nous avons créé 6 groupes d'âge: <br> -groupe 1: 15-18 ans <br> -groupe 2: 18-25 ans<br> -groupe 3: 25-35 ans
+<br> -groupe 4: 35-45 ans <br> -groupe 5: 45-60 ans <br> groupe 6: 60+ ans <br> Nous partons de l’hypothèse que les plus jeunes sont plus influençables et, lorsqu’ils deviennent plus âgés, leur identité est plus solide et c’est moins probable qu’ils soient influencés par les choix de leurs pairs. Pour donner cette nuance à notre modèle, nous définissons une probabilité de changement proba_changement qui est un nombre aléatoire entre 1 et 6 et, pour qu’un individu décide de changer de couleur et d’imiter ses voisins, il faut que proba_changement soit supérieur à son age. Ainsi, le groupe des plus jeunes va toujours regarder ce que font leurs voisins tandis que les plus vieux ont une probabilité très faible de changer la couleur qu’ils ont. <br> Après une expérience sur une population de 500 individus où chaque individu a eu la possibilité de changer 10 fois, nous en tirons les graphes suivants qui représentent l’évolution du nombre total de rouges et de bleus pour chaque groupe d'âge: </p>
+
+
+
+
+<div class="slide-container">
+      <div class="custom-slider fade">
+        <div class="slide-index">1 / 5</div>
+        <img class="slide-img" src="graph1.png">
+        <div class="slide-text">Groupe 1</div>
+      </div>
+      <div class="custom-slider fade">
+        <div class="slide-index">2 / 5</div>
+        <img class="slide-img" src="graph2.png">
+        <div class="slide-text">Groupe 2</div>
+      </div>
+      <div class="custom-slider fade">
+        <div class="slide-index">3 / 5</div>
+        <img class="slide-img" src="graph3.png">
+        <div class="slide-text">Groupe 3</div>
+      </div>
+            <div class="custom-slider fade">
+        <div class="slide-index">4 / 5</div>
+        <img class="slide-img" src="graph4.png">
+        <div class="slide-text">Groupe 4</div>
+      </div>
+
+      <div class="custom-slider fade">
+        <div class="slide-index">5 / 5</div>
+        <img class="slide-img" src="graph5.png">
+        <div class="slide-text">Groupe 5</div>
+      </div>
+      <div class="custom-slider fade">
+        <div class="slide-index">5 / 5</div>
+        <img class="slide-img" src="graph6.png">
+        <div class="slide-text">Groupe 6</div>
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="slide-dot">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+
+    </div>
+
+
+
+</body>
+</html>
+
+<!-- for comments -->
